@@ -77,6 +77,8 @@ def NewtonRaphson(f, df, x0, tol=1e-5, *args, **kwargs):
 
     """
     stop = False
+
+    x = x0
     
     while(not stop):
         val = f(x, *args, **kwargs)
