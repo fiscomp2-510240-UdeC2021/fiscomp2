@@ -12,7 +12,8 @@ class Lagrange(Poly):
         L = [Poly([-xj,1]) for xj in xp]
 
         pol = Poly([0.0])
-        
+
+        # para cada valor de i, calcula polinomios de Lagrange
         for i,(xi,yi) in enumerate(zip(xp,yp)):
             tmp = np.prod(L[:i]) * np.prod(L[i+1:])
             tmp = tmp * (yi / tmp(xi))
