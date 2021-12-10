@@ -4,6 +4,7 @@ import numpy as np
 
 class Lagrange(Poly):
     def __init__(self, xp, yp):
+        """Clase para interpolar usando método de Lagrange"""
         super().__init__([0])
         
         self.xp = np.asarray(xp)
