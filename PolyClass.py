@@ -94,7 +94,7 @@ Para un polinomio de la forma `P(x)=p0 + p1*x + p2*x**2 + ... + pN*x**N`, esta c
             other = Poly([other])
         
         k = self.deg + 1
-        coef = np.zeros(k + other.deg)
+        coef = np.zeros(k + other.deg, dtype=self.coef.dtype)
         
         for i,c in enumerate(other.coef):
             coef[i:i+k] += c*self.coef
